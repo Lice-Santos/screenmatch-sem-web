@@ -1,7 +1,7 @@
 package br.com.alura.screenmatch;
 
 import br.com.alura.screenmatch.Service.ConsumoAPI;
-import br.com.alura.screenmatch.Service.ConverterDados;
+import br.com.alura.screenmatch.Service.ConverteDados;
 import br.com.alura.screenmatch.model.DadosSerie;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -21,7 +21,7 @@ public class ScreenmatchApplication implements CommandLineRunner { // significa 
 		System.out.println(json);
 //		json = consumoAPI.obterDados("https://coffee.alexflipnote.dev/random.json");
 //		System.out.println(json);
-		ConverterDados conversor = new ConverterDados();
+		ConverteDados conversor = new ConverteDados();
 		DadosSerie dados = conversor.obterDados(json, DadosSerie.class);
 		System.out.println("--------Depois das conversões com json-------------");
 		System.out.println(dados);
